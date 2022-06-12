@@ -2,9 +2,6 @@ void entitylistTEMP()
     {
         foreach (GameObject AP in APList)
         {
-            //transform.parent;
-            //Action_Que.AddRange(GameObject.parent);
-            //QueQuedEntity = AP
             Action_Que.Add(AP.transform.parent.gameObject);
         }
         for (int i = 0; i < Action_Que.Count; i++)
