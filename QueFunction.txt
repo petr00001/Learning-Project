@@ -1,17 +1,18 @@
 void entitylistTEMP()
     {
-        foreach (GameObject AP in APList)
+        foreach (GameObject AP in APList) //Objects added are parents of objects from another list
         {
             Action_Que.Add(AP.transform.parent.gameObject);
         }
-        for (int i = 0; i < Action_Que.Count; i++)
+        for (int i = 0; i < Action_Que.Count; i++)  //the list is randomised
         {
             GameObject temp = Action_Que[i];
             int randomIndex = Random.Range(i, Action_Que.Count);
             Action_Que[i] = Action_Que[randomIndex];
             Action_Que[randomIndex] = temp;
         }
-        foreach (GameObject E in Action_Que)
+        foreach (GameObject E in Action_Que)    //Each object changes its position based on its int(positive numbers push it to the front of the list)
         {
              
         }
+    }
